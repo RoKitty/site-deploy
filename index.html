@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>RoKitty</title>
+<link href="./assets/css/styles.css" rel="stylesheet"/>
+<link href="https://rsms.me/" rel="preconnect"/>
+<link href="https://rsms.me/inter/inter.css" rel="stylesheet"/>
+<meta content="RoKitty is a work-in-progress web browser extension that provides a reimagined Roblox experience." name="description"/>
+<meta content="RoKitty" property="og:title"/>
+<meta content="RoKitty is a work-in-progress web browser extension that provides a reimagined Roblox experience." property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="https://rokitty.app" property="og:url"/>
+<meta content="https://rokitty.app/assets/images/banner.png" property="og:image"/>
+<link href="https://rokitty.app" rel="canonical">
+<link href="./favicon.ico" rel="icon">
+<link href="./favicon.svg" rel="icon" type="image/svg+xml"/>
+</link></link></head>
+<body>
+<div aria-hidden="true" id="wipe"></div>
+<svg aria-hidden="true" height="48" overflow="hidden" style="position: absolute; width: 0; height: 0" width="48" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<symbol id="kitty-fill" viewbox="0 0 48 48">
+<g clip-path="url(#clip0_1272_1349)">
+<path clip-rule="evenodd" d="M14.876 8.56s2.375-6.61 4.065-6.157c1.69.453 2.696 7.97 2.696 7.97l15.455 4.14c.015-.019 4.631-6.005 6.319-5.553 1.69.453.442 7.365.442 7.365l-.518 1.932-3.81 14.222 4.936-.401a1 1 0 1 1 .162 1.993l-5.648.46-.131.49 4.852.935a1 1 0 1 1-.379 1.964l-4.992-.963-.237.885 4.776 2.04a1 1 0 1 1-.786 1.84l-4.513-1.929-1.477 5.51L7.111 37.54l1.476-5.51-4.872-.587a1 1 0 0 1 .24-1.986l5.155.621.237-.885-4.804-1.662a1 1 0 0 1 .654-1.89l4.669 1.616.131-.49-4.66-3.222a1 1 0 0 1 1.137-1.645l4.073 2.816L14.875 8.56Zm10.236 22.845c1.62.088 3.023-.849 3.252-1.704.665-2.484-6.096-4.296-6.762-1.812-.229.856.518 2.368 1.965 3.102-1.449 1.554-2.936 2.016-4.06 1.831-1.148-.188-2.136-1.085-2.474-2.683a.75.75 0 0 0-1.467.31c.445 2.103 1.844 3.55 3.699 3.854 1.506.247 3.16-.283 4.666-1.583.655 1.878 1.823 3.165 3.25 3.704 1.758.664 3.694.111 5.13-1.488a.75.75 0 0 0-1.115-1.002c-1.092 1.215-2.396 1.498-3.485 1.087-1.065-.403-2.122-1.546-2.6-3.616Zm-2.47-9.864c-.407 2.032-2.027 3.435-3.619 3.135-1.592-.3-2.554-2.19-2.148-4.221.407-2.031 2.026-3.435 3.619-3.135 1.592.3 2.553 2.19 2.147 4.221Zm13.532 4.085c-.664 1.963-2.441 3.119-3.97 2.582-1.529-.536-2.23-2.561-1.566-4.524.664-1.962 2.442-3.118 3.97-2.582 1.53.536 2.23 2.562 1.566 4.524Z" fill="currentcolor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_1272_1349">
+<path d="M0 0h48v48H0z" fill="currentcolor"></path>
+</clippath>
+</defs>
+</symbol>
+<symbol id="kitty-outline" viewbox="0 0 48 48">
+<g clip-path="url(#clip0_1272_1368)" clip-rule="evenodd" fill="currentcolor" fill-rule="evenodd">
+<path d="m42.19 30.256 3.595-13.413c.115-.432.157-.891.217-1.33.095-.687.206-1.623.26-2.588.053-.938.061-2.022-.097-2.958-.079-.462-.218-1.015-.497-1.524-.287-.521-.825-1.17-1.74-1.415-.834-.224-1.587.003-2.045.195-.496.208-.961.508-1.362.806-.809.6-1.637 1.404-2.349 2.155a43.005 43.005 0 0 0-1.82 2.06l-12.94-3.467a43.107 43.107 0 0 0-.544-2.684c-.241-1.008-.557-2.12-.957-3.047-.199-.46-.451-.953-.777-1.381-.301-.396-.84-.97-1.676-1.194-.914-.245-1.705.048-2.214.356-.496.301-.893.71-1.192 1.072-.605.73-1.14 1.674-1.564 2.512-.589 1.168-1.153 2.38-1.545 3.632L9.35 21.455l-1.738-1.201a3 3 0 0 0-4.384 3.82c-.537.352-.966.877-1.192 1.53a2.991 2.991 0 0 0 .157 2.334 3 3 0 0 0 1.284 5.489l2.582.311-.88 3.283a2 2 0 0 0 1.415 2.45l28.977 7.764a2 2 0 0 0 2.45-1.414l.88-3.283 2.392 1.022a3 3 0 0 0 3.856-4.111 2.991 2.991 0 0 0 1.304-1.943 2.987 2.987 0 0 0-.268-1.92 3 3 0 0 0-1.886-5.502l-2.108.172ZM5.083 22.153a1 1 0 0 1 1.391-.254l4.073 2.815 4.33-16.153s2.374-6.61 4.065-6.158c1.69.453 2.696 7.97 2.696 7.97l15.454 4.14c.015-.019 4.632-6.005 6.32-5.553 1.69.453.442 7.365.442 7.365L39.524 32.48l4.937-.401a1 1 0 1 1 .162 1.993l-5.648.46-.132.49 4.853.935a.996.996 0 0 1 .792 1.171 1 1 0 0 1-1.171.793h-.002l-4.99-.963-.238.885 4.777 2.04a1 1 0 0 1-.786 1.84l-4.514-1.929-1.476 5.51L7.11 37.538l1.477-5.51-4.872-.586a1 1 0 1 1 .24-1.986l5.155.62.237-.884-4.804-1.662-.067-.026a1 1 0 0 1 .72-1.864l4.67 1.616.13-.49-4.66-3.222a1 1 0 0 1-.254-1.391Z"></path>
+<path d="M22.641 21.541c-.406 2.032-2.026 3.435-3.618 3.135-1.592-.3-2.554-2.19-2.148-4.221.407-2.032 2.026-3.435 3.619-3.135 1.592.3 2.553 2.19 2.147 4.221Zm13.533 4.085c-.664 1.962-2.441 3.118-3.97 2.582-1.529-.536-2.23-2.562-1.566-4.524.664-1.962 2.442-3.118 3.97-2.582 1.53.536 2.23 2.562 1.566 4.524Zm-7.81 4.074c-.217.81-1.486 1.693-2.994 1.71a47.3 47.3 0 0 1-.25-.035c.475 2.087 1.537 3.24 2.607 3.644 1.089.41 2.393.128 3.485-1.087a.75.75 0 0 1 1.115 1.002c-1.436 1.6-3.372 2.152-5.13 1.488-1.428-.54-2.595-1.826-3.25-3.704-1.506 1.3-3.16 1.83-4.667 1.582-1.854-.304-3.254-1.75-3.699-3.853a.75.75 0 0 1 1.468-.31c.338 1.598 1.326 2.495 2.474 2.683 1.126.185 2.617-.279 4.068-1.84a6.839 6.839 0 0 1-.25-.113c-1.298-.77-1.956-2.168-1.739-2.978.666-2.484 7.427-.672 6.762 1.811Z"></path>
+</g>
+<defs>
+<clippath id="clip0_1272_1368">
+<path d="M0 0h48v48H0z" fill="currentcolor"></path>
+</clippath>
+</defs>
+</symbol>
+</defs>
+</svg>
+<div id="root">
+<div id="banner">
+<svg aria-hidden="true" class="icon">
+<use href="#kitty-fill"></use>
+<use href="#kitty-outline"></use>
+</svg>
+<svg aria-label="RoKitty" class="banner-text-svg">
+<text y="50%">RoKitty</text>
+</svg>
+</div>
+<div id="contents">
+<h2 id="intro">intro</h2>
+<p>
+          hi! my name is <a href="https://jmk.gg">jmkdev</a>! i'm a web developer with a focus on Roblox. <br/>
+          this is the homepage for RoKitty, a web app i'm building that replaces the Roblox website. if you'd like to skip the intro and get right to the pretty pictures, <a href="#join-in">feel free.</a>
+</p>
+<h2 id="motivation">motivation</h2>
+<p>
+          the <a href="https://www.webdesignmuseum.org/timeline/roblox-2005">almost 20 year old</a> website is lacking, and the new desktop app isn't filling that void.
+        </p>
+<p>
+          developers have been building Chrome extensions to improve the website for <a href="https://twitter.com/MerelyRBLX/status/280202515260243968">more than a decade</a>. extensions like <a href="https://chrome.google.com/webstore/detail/btroblox-making-roblox-be/hbkpclpemjeibhioopcebchdmohaieln">BTRoblox</a> and <a href="https://chrome.google.com/webstore/detail/roblox%20/jfbnmfgkohlfclfnplnlenbalpppohkm">Roblox+</a> are great, but we can go further.
+        </p>
+<h2 id="project">project</h2>
+<p>
+          i saw the issues with the Roblox experience on desktop and decided i could make something better.
+          since September 2022, i've been building an app called <b>RoKitty</b>.
+        </p>
+<p>
+          RoKitty is a web app that provides a completely reimagined Roblox experience, rebuilt from the ground up. 
+          it's not public yet, but i'm continuing to make progress here and there.
+          it's not a theme or patch, but instead a completely new web app. it's packaged in the form of a browser extension,
+          which means you need the extension installed to access the app.
+        </p>
+<h2 id="join-in">join in</h2>
+<p>
+          if you're interested in my mission to build a better Roblox app, here's what you can do:
+          <ul>
+<li>please join the <a href="https://discord.gg/NtU4qXkCpW">Discord server</a>, where i've been posting frequent devlogs and project updates</li>
+<li>join the <a href="https://www.roblox.com/groups/16888343/RoKitty-Extension#!/about">Roblox group</a></li>
+<li>follow <a href="https://twitter.com/intent/follow?screen_name=GetRoKitty">@GetRoKitty</a> on Twitter</li>
+</ul>
+</p>
+<h2 id="progress">progress</h2>
+<span id="demos-subtitle">these are the last 20 images and videos from the #devlog channel in the RoKitty <a href="https://discord.gg/NtU4qXkCpW">Discord server</a>.</span>
+<div id="demos"><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.392914653784219;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1185672426495934584/image.png?ex=6590767f&amp;is=657e017f&amp;hm=6659c3c0e3865033aa7bfa2de3f574600bc96f2489e4820f97260420ef5e96ac&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.392914653784219;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1185672105937874985/image.png?ex=65907632&amp;is=657e0132&amp;hm=4e2c37d6afdb592e7eb1b46c91cc4a6e5d28540d16c65c452914f1c8a58f5306&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 0.8855421686746988;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1172398214880706580/image.png?ex=65602bec&amp;is=654db6ec&amp;hm=71863178288b89291db9b98df7f35f122d13f289556bc631d3bff6f524674e83&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 1.148076923076923;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1172398206685040752/image.png?ex=65602bea&amp;is=654db6ea&amp;hm=89b59b7ce8877d2419a06f0ee6454edec0384bb6e3f7ce8435cde8978a4146dd&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 3.1616161616161618;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1172398199093342208/image.png?ex=65602be8&amp;is=654db6e8&amp;hm=3cdcc0c6ea6f0b4f53236abb8d422956bf2ebe5f463056a446751c8b53be2963&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 1.4967948717948718;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1172398023976964126/image.png?ex=65602bbf&amp;is=654db6bf&amp;hm=1b078df4147ff69a675d00b444dfcd23ce23c3123206da01094d0cfd9237511d&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 0.8746770025839793;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1172395301009637396/image.png?ex=65602935&amp;is=654db435&amp;hm=3752572b148108c2eb94e74ea77953c5c3bd93d527567389618bdba5c472c34f&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 0.9398496240601504;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1166507955399708722/image.png?ex=654abe31&amp;is=65384931&amp;hm=0f61f0238393675923eac25fbd7a5e04549ceba8d9c3d13aba653a243940f052&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.7902912621359224;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1165694018357825536/image.png?ex=6547c827&amp;is=65355327&amp;hm=ddfc72fcec68142fe3fad95476afe20d5bbf4a02161f33df2de8a973a4d1ffa5&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 0.8040540540540541;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1165694018726920294/image.png?ex=6547c827&amp;is=65355327&amp;hm=8cde2c9bcacc173dc1b6626ce7b86ed7c8115fb9c09661395dab84665d9240c6&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 2.8059701492537314;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1165694019016335501/image.png?ex=6547c827&amp;is=65355327&amp;hm=b0cb082c34163f564070f1a476712eb219c699ed18c1bf43084464a0b9dae7bb&amp;"/></div><div class="demo-card" data-fill-row="false" style="aspect-ratio: 1.8256410256410256;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1165694019284766812/image.png?ex=6547c827&amp;is=65355327&amp;hm=c01333622810015eaf2782a770ebbd451d52a19679562982f9bd982a803ef331&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.2265886287625418;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1159270462774325268/image.png?ex=653069c0&amp;is=651df4c0&amp;hm=992e230e3827e7523fbd04dda0e2da45ff793ce6b30d9a6076b9596d6bf81de5&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.2265886287625418;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1159270463315398757/image.png?ex=653069c0&amp;is=651df4c0&amp;hm=c0f3196ffc90ba9837dabf429b7b33d20f8af706c69df83fa32002029caf945b&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.2265886287625418;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1159270463613182033/image.png?ex=653069c0&amp;is=651df4c0&amp;hm=80e9c1791de115ffdab98e8fccd888050920a13087dbfb2a4e4cd95c5387623d&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.2265886287625418;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1159270463940341810/image.png?ex=653069c0&amp;is=651df4c0&amp;hm=0820c445822694ae6544eb3398c90d29297aa962e7e136c289be3b888fe1641a&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.2265886287625418;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1159270464363974656/image.png?ex=653069c0&amp;is=651df4c0&amp;hm=b8a290f2e581f31670b866b95d55ea8b034620ed6a9da2423454c38b09dd95b4&amp;"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.5510396975425331;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1154932978842075136/dark0.png"/></div><div class="demo-card" data-fill-row="true" style="aspect-ratio: 1.5510396975425331;"><img src="https://cdn.discordapp.com/attachments/1034700563650195466/1154932973796327544/light0.png"/></div></div>
+</div>
+</div>
+</body>
+</html>

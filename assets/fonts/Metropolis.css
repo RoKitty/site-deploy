@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Metropolis";
+  font-weight: 800;
+  src: url("./Metropolis-ExtraBold.woff") format("woff"),
+       url("./Metropolis-ExtraBold.wof2") format("woff")
+}
